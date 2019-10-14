@@ -1,6 +1,7 @@
 module up_counter    (
 out     ,  // Output of the counter
 enable  ,  // enable for counter
+in      ,
 clk     ,  // clock Input
 reset      // reset Input
 );
