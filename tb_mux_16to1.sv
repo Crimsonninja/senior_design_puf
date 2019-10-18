@@ -1,9 +1,10 @@
 `timescale 1ns/1ps
 
 module mux_test();
-
+  // Instantiating inputs of mux
   reg d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16;
   reg [3:0] sel;
+  // Instantiating outputs of mux
   wire out;
 
   mux_16to1 test(d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, sel, out);

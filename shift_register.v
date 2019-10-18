@@ -6,7 +6,7 @@ module shift_register (clk, in, out);
   always @(posedge clk) begin
     //tmp = tmp << 1;
     //tmp[0] = SI;
-    tmp = {tmp[6:0],in}
+    tmp = {tmp[6:0],in};
   end
 
   assign out  = tmp;

@@ -1,39 +1,5 @@
 {
-    "CompileProcesses": [
-        "cgproc.14828.json"
-    ],
     "MlibObjs": {},
-    "PrevCompiledModules": {
-        "std": {
-            "reYIK_d": {
-                "bytes": 41999,
-                "out": "reYIK_d.o",
-                "mode": 4,
-                "mod": "std",
-                "archive": "archive.39/_prev_archive_1.a",
-                "checksum": 0
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "bytes": 7742,
-                "out": "objs/amcQw_d.o",
-                "mode": 4,
-                "mod": "...MASTER...",
-                "checksum": 0
-            }
-        },
-        "up_counter_test": {
-            "aeb8y_d": {
-                "bytes": 15040,
-                "mode": 4,
-                "out": "aeb8y_d.o",
-                "mod": "up_counter_test",
-                "archive": "archive.39/_14828_archive_1.a",
-                "checksum": 0
-            }
-        }
-    },
     "NameTable": {
         "std": [
             "std",
@@ -41,92 +7,117 @@
             "module",
             3
         ],
+        "tb_shift_register": [
+            "tb_shift_register",
+            "xSPDh",
+            "module",
+            1
+        ],
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module",
             2
-        ],
-        "up_counter_test": [
-            "up_counter_test",
-            "aeb8y",
-            "module",
-            1
         ]
     },
-    "CurCompileUdps": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "bytes": 41999,
+                "checksum": 0,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.46/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7742,
+                "checksum": 0,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "out": "objs/amcQw_d.o"
+            }
+        }
+    },
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 100360,
-        "archive": "archive.39/_14828_archive_1.a"
+        "bytes": 99756,
+        "archive": "archive.46/_28582_archive_1.a"
     },
     "PEModules": [],
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_minflt": 22411,
+            "ru_utime_sec": 0.10730199999999999,
+            "ru_nivcsw": 49,
+            "ru_stime_sec": 0.081805000000000003,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 66988,
+            "ru_nvcsw": 370
+        },
+        "ru_childs_cgstart": {
+            "ru_minflt": 4345,
+            "ru_utime_sec": 0.012311000000000001,
+            "ru_nivcsw": 16,
+            "ru_stime_sec": 0.026731000000000001,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 20040,
+            "ru_nvcsw": 31
+        },
+        "nMops": 791,
+        "nQuads": 345,
+        "CodeGen(%)": 21.473892202422334,
+        "totalObjSize": 119716,
+        "ru_childs_end": {
+            "ru_minflt": 4945,
+            "ru_utime_sec": 0.013382,
+            "ru_nivcsw": 18,
+            "ru_stime_sec": 0.032080999999999998,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 21496,
+            "ru_nvcsw": 38
+        },
+        "mopSpeed": 26957.025525679044,
+        "ru_self_end": {
+            "ru_minflt": 25195,
+            "ru_utime_sec": 0.13664499999999999,
+            "ru_nivcsw": 53,
+            "ru_stime_sec": 0.098383999999999999,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 74548,
+            "ru_nvcsw": 513
+        },
+        "quadSpeed": 11757.489009303754,
+        "mop/quad": 2.2927536231884056,
+        "Frontend(%)": 78.526107797577666,
+        "outputSizePerQuad": 347.00289855072464,
+        "peak_mem_kb": 278728
+    },
+    "Misc": {
+        "csrc": "csrc",
+        "cwd": "/DCNFS/users/student/jtrinh/senior_design_puf",
+        "csrc_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/csrc",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.46"
+    },
     "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "...MASTER...",
+        "std",
+        "tb_shift_register",
+        "tb_shift_register"
+    ],
     "CompileStatus": "Successful",
     "LVLData": [
         "SIM"
     ],
-    "stat": {
-        "ru_self_cgstart": {
-            "ru_utime_sec": 0.106672,
-            "ru_nivcsw": 31,
-            "ru_stime_sec": 0.078978000000000007,
-            "ru_majflt": 0,
-            "ru_maxrss_kb": 66820,
-            "ru_minflt": 22299,
-            "ru_nvcsw": 380
-        },
-        "ru_self_end": {
-            "ru_utime_sec": 0.13872599999999999,
-            "ru_nivcsw": 35,
-            "ru_stime_sec": 0.095457,
-            "ru_majflt": 0,
-            "ru_maxrss_kb": 74588,
-            "ru_minflt": 25160,
-            "ru_nvcsw": 515
-        },
-        "ru_childs_cgstart": {
-            "ru_utime_sec": 0.0080809999999999996,
-            "ru_nivcsw": 16,
-            "ru_stime_sec": 0.024434999999999998,
-            "ru_majflt": 0,
-            "ru_maxrss_kb": 19960,
-            "ru_minflt": 4345,
-            "ru_nvcsw": 31
-        },
-        "mopSpeed": 36906.470331315919,
-        "quadSpeed": 17408.123791102524,
-        "totalObjSize": 115400,
-        "ru_childs_end": {
-            "ru_utime_sec": 0.0091819999999999992,
-            "ru_nivcsw": 18,
-            "ru_stime_sec": 0.029936999999999998,
-            "ru_majflt": 0,
-            "ru_maxrss_kb": 21532,
-            "ru_minflt": 4945,
-            "ru_nvcsw": 40
-        },
-        "peak_mem_kb": 278492,
-        "nMops": 1183,
-        "nQuads": 558,
-        "outputSizePerQuad": 206.8100358422939,
-        "mop/quad": 2.1200716845878138,
-        "CodeGen(%)": 23.105978691809746,
-        "Frontend(%)": 76.894021308190261
-    },
-    "CurCompileModules": [
-        "...MASTER...",
-        "std",
-        "up_counter_test",
-        "up_counter_test"
-    ],
-    "Misc": {
-        "daidir_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir",
-        "cwd": "/DCNFS/users/student/jtrinh/senior_design_puf",
-        "csrc": "csrc",
-        "default_output_dir": "csrc",
-        "csrc_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/csrc",
-        "daidir": "simv.daidir",
-        "archive_dir": "archive.39"
-    }
+    "CompileProcesses": [
+        "cgproc.28582.json"
+    ]
 }

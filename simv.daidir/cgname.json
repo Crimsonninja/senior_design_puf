@@ -1,7 +1,13 @@
 {
-    "up_counter_test": [
-        "up_counter_test",
-        "aeb8y",
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        2
+    ],
+    "tb_shift_register": [
+        "tb_shift_register",
+        "xSPDh",
         "module",
         1
     ],
@@ -10,11 +16,5 @@
         "reYIK",
         "module",
         3
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        2
     ]
 }

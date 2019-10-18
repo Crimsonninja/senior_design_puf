@@ -1,0 +1,120 @@
+{
+    "Modules": {
+        "tb_shift_register": {
+            "nQuads": 167,
+            "start_perf": [
+                0.88358402252197266,
+                0.105695,
+                0.099597000000000005,
+                262972,
+                271412,
+                1571378457.857677
+            ],
+            "nMops": 325,
+            "end_perf": [
+                0.9293830394744873,
+                0.1162,
+                0.10385999999999999,
+                267204,
+                278476
+            ],
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "std": {
+            "nQuads": 218,
+            "start_perf": [
+                0.83942294120788574,
+                0.099195000000000005,
+                0.096188999999999997,
+                261916,
+                271412,
+                1571378457.8135159
+            ],
+            "nMops": 528,
+            "end_perf": [
+                0.88347506523132324,
+                0.105638,
+                0.099543999999999994,
+                262972,
+                271412
+            ],
+            "Compiled Times": 47,
+            "Compiled": "Yes"
+        },
+        "...MASTER...": {
+            "nQuads": 0,
+            "start_perf": [
+                0.79273295402526855,
+                0.097620999999999999,
+                0.090475,
+                259364,
+                271412,
+                1571378457.7668259
+            ],
+            "nMops": 0,
+            "end_perf": [
+                0.83920001983642578,
+                0.099089999999999998,
+                0.096087000000000006,
+                261916,
+                271412
+            ]
+        }
+    },
+    "CompUnits": {
+        "xSPDh_d": {
+            "mode": 4,
+            "mod": "tb_shift_register",
+            "out": "xSPDh_d.o",
+            "archive": "archive.47/_31241_archive_1.a",
+            "bytes": 12210,
+            "checksum": 0
+        }
+    },
+    "stat": {
+        "peak_mem_kb": 278476,
+        "ru_self_end": {
+            "ru_utime_sec": 0.120444,
+            "ru_maxrss_kb": 74112,
+            "ru_stime_sec": 0.112278,
+            "ru_minflt": 25270,
+            "ru_majflt": 0,
+            "ru_nvcsw": 482,
+            "ru_nivcsw": 54
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.015073,
+            "ru_maxrss_kb": 21496,
+            "ru_stime_sec": 0.030948,
+            "ru_minflt": 4945,
+            "ru_majflt": 0,
+            "ru_nvcsw": 40,
+            "ru_nivcsw": 19
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.47/_31241_archive_1.a",
+            "objects": [
+                [
+                    "xSPDh_d.o",
+                    12210
+                ],
+                [
+                    "amcQwB.o",
+                    99756
+                ]
+            ],
+            "size": 111966
+        }
+    ]
+}

@@ -1,50 +1,20 @@
 Chronologic VCS simulator copyright 1991-2017
 Contains Synopsys proprietary information.
-Compiler version M-2017.03-SP1-1_Full64; Runtime version M-2017.03-SP1-1_Full64;  Oct 17 22:15 2019
+Compiler version M-2017.03-SP1-1_Full64; Runtime version M-2017.03-SP1-1_Full64;  Oct 17 23:01 2019
 VCD+ Writer M-2017.03-SP1-1_Full64 Copyright (c) 1991-2017 by Synopsys Inc.
 The file '/DCNFS/users/student/jtrinh/senior_design_puf/inter.vpd' was opened successfully.
-Start of Up Counter Test
-Output of counter:   x 	 Time:                    0
-Output of counter: 250 	 Time:                    5
-Output of counter: 251 	 Time:                   15
-Output of counter: 252 	 Time:                   25
-Output of counter: 253 	 Time:                   35
-Output of counter: 254 	 Time:                   45
-Output of counter: 250 	 Time:                   55
-Output of counter: 251 	 Time:                   75
-Output of counter: 252 	 Time:                   85
-Output of counter: 253 	 Time:                   95
-Output of counter: 254 	 Time:                  105
-Output of counter: 255 	 Time:                  115
-Output of counter:   0 	 Time:                  135
-Output of counter:   1 	 Time:                  145
-Output of counter:   2 	 Time:                  155
-Output of counter:   3 	 Time:                  165
-Output of counter:   4 	 Time:                  175
-Output of counter:   5 	 Time:                  185
-Output of counter:   6 	 Time:                  195
-Output of counter:   7 	 Time:                  205
-Output of counter:   8 	 Time:                  215
-Output of counter:   9 	 Time:                  225
-Output of counter:  10 	 Time:                  235
-Output of counter:  11 	 Time:                  245
-Output of counter:  12 	 Time:                  255
-Output of counter:  13 	 Time:                  265
-Output of counter:  14 	 Time:                  275
-Output of counter:  15 	 Time:                  285
-Output of counter:  16 	 Time:                  295
-Output of counter:  17 	 Time:                  305
-Output of counter:  18 	 Time:                  315
-Output of counter:  19 	 Time:                  325
-Output of counter:  20 	 Time:                  335
-Output of counter:  21 	 Time:                  345
-Output of counter:  22 	 Time:                  355
-Output of counter:  23 	 Time:                  365
-Output of counter:  24 	 Time:                  375
-$finish called from file "tb_up_counter.sv", line 39.
-$finish at simulation time               381000
-Simulation complete, time is 381000 ps.
+$finish called from file "tb_shift_register.sv", line 15.
+$finish at simulation time                   96
+Simulation complete, time is 96.
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version M-2017.03-SP1-1_Full64; Runtime version M-2017.03-SP1-1_Full64;  Oct 17 23:02 2019
+VCD+ Writer M-2017.03-SP1-1_Full64 Copyright (c) 1991-2017 by Synopsys Inc.
+The file '/DCNFS/users/student/jtrinh/senior_design_puf/inter.vpd' was opened successfully.
+$finish called from file "tb_shift_register.sv", line 15.
+$finish at simulation time                   96
+Simulation complete, time is 96.
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 381000 ps
-CPU Time:      0.080 seconds;       Data structure size:   0.0Mb
-Thu Oct 17 22:16:58 2019
+Time: 96
+CPU Time:      0.110 seconds;       Data structure size:   0.0Mb
+Thu Oct 17 23:05:29 2019

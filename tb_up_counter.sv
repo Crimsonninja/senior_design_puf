@@ -5,7 +5,7 @@ module up_counter_test();
   reg [7:0] start;  
   wire [7:0] out;   // instantiating output to the counter
 
-  up_counter dut(.out(out), .enable(en), .in(start), .clk(clk), .reset(rst));
+  up_counter dut(.out(out), .enable(en), .in(start), .clk(clk), .reset(rst)); // instantiating the up counter DUT
 
   initial begin
     $display("Start of Up Counter Test");
