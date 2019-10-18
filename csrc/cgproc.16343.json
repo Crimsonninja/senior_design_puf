@@ -1,0 +1,120 @@
+{
+    "CompUnits": {
+        "aeb8y_d": {
+            "mod": "up_counter_test",
+            "checksum": 0,
+            "bytes": 16433,
+            "out": "aeb8y_d.o",
+            "archive": "archive.40/_16343_archive_1.a",
+            "mode": 4
+        }
+    },
+    "Modules": {
+        "...MASTER...": {
+            "start_perf": [
+                0.86647701263427734,
+                0.10266500000000001,
+                0.079138,
+                259588,
+                271452,
+                1571375706.146615
+            ],
+            "end_perf": [
+                0.91224908828735352,
+                0.105154,
+                0.083694000000000005,
+                261932,
+                271452
+            ],
+            "nQuads": 0,
+            "nMops": 0
+        },
+        "up_counter_test": {
+            "start_perf": [
+                0.95618009567260742,
+                0.11282,
+                0.085958000000000007,
+                262988,
+                271452,
+                1571375706.2363181
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 12,
+            "end_perf": [
+                1.0210058689117432,
+                0.123851,
+                0.093153,
+                267220,
+                278492
+            ],
+            "nQuads": 212,
+            "nMops": 401
+        },
+        "std": {
+            "start_perf": [
+                0.91246604919433594,
+                0.105267,
+                0.083783999999999997,
+                261932,
+                271452,
+                1571375706.1926041
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 40,
+            "end_perf": [
+                0.95607995986938477,
+                0.112762,
+                0.085914000000000004,
+                262988,
+                271452
+            ],
+            "nQuads": 218,
+            "nMops": 528
+        }
+    },
+    "stat": {
+        "ru_self_end": {
+            "ru_nvcsw": 511,
+            "ru_utime_sec": 0.132161,
+            "ru_minflt": 25307,
+            "ru_stime_sec": 0.097777000000000003,
+            "ru_maxrss_kb": 74584,
+            "ru_majflt": 0,
+            "ru_nivcsw": 34
+        },
+        "peak_mem_kb": 278492,
+        "ru_childs_end": {
+            "ru_nvcsw": 40,
+            "ru_utime_sec": 0.013244000000000001,
+            "ru_minflt": 4945,
+            "ru_stime_sec": 0.030186000000000001,
+            "ru_maxrss_kb": 21528,
+            "ru_majflt": 0,
+            "ru_nivcsw": 18
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.40/_16343_archive_1.a",
+            "objects": [
+                [
+                    "aeb8y_d.o",
+                    16433
+                ],
+                [
+                    "amcQwB.o",
+                    100360
+                ]
+            ],
+            "size": 116793
+        }
+    ]
+}

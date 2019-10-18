@@ -7,7 +7,7 @@ UUM=FALSE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
 COSIM=FALSE
-TOP=mux_test 
+TOP=up_counter_test 
 
 [Value]
 WREALX=ffff534e50535f58

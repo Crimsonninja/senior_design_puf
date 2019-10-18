@@ -25,8 +25,8 @@
 -picarchive
 -sverilog
 /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/bin/vcs1
-mux_16to1.v
-tb_mux_16to1.sv
+tb_up_counter.sv
+up_counter.v
 61
 sysc_uni_pwd=/DCNFS/users/student/jtrinh/senior_design_puf
 XDG_SESSION_ID=20991
@@ -91,12 +91,12 @@ APP_ROOT=/opt/synopsys-2017/app
 APP=synopsys-2017
 0
 3
-1571368221 mux_16to1.v
-1571368225 tb_mux_16to1.sv
+1571372026 up_counter.v
+1571375677 tb_up_counter.sv
 1499742301 /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/vcsdp_lite.tab
 4
 0 
 1499744793 /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/libvirsim.so
 1499743980 /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/liberrorinf.so
 1499743944 /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/libsnpsmalloc.so
-1571368256 simv.daidir
+1571375710 simv.daidir

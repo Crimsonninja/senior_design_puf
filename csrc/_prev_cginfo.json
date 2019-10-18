@@ -1,50 +1,39 @@
 {
-    "SIMBData": {
-        "bytes": 99281,
-        "out": "amcQwB.o",
-        "archive": "archive.22/_12744_archive_1.a"
-    },
-    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.14828.json"
+    ],
     "MlibObjs": {},
-    "CompileStrategy": "fullobj",
     "PrevCompiledModules": {
         "std": {
             "reYIK_d": {
-                "out": "reYIK_d.o",
                 "bytes": 41999,
+                "out": "reYIK_d.o",
                 "mode": 4,
                 "mod": "std",
-                "checksum": 0,
-                "archive": "archive.22/_prev_archive_1.a"
+                "archive": "archive.39/_prev_archive_1.a",
+                "checksum": 0
             }
         },
         "...MASTER...": {
             "amcQw_d": {
+                "bytes": 7742,
                 "out": "objs/amcQw_d.o",
-                "bytes": 7734,
                 "mode": 4,
                 "mod": "...MASTER...",
                 "checksum": 0
             }
+        },
+        "up_counter_test": {
+            "aeb8y_d": {
+                "bytes": 15040,
+                "mode": 4,
+                "out": "aeb8y_d.o",
+                "mod": "up_counter_test",
+                "archive": "archive.39/_14828_archive_1.a",
+                "checksum": 0
+            }
         }
     },
-    "CurCompileModules": [
-        "...MASTER...",
-        "...MASTER...",
-        "std",
-        "mux_16to1",
-        "mux_16to1"
-    ],
-    "Misc": {
-        "cwd": "/DCNFS/users/student/jtrinh/senior_design_puf",
-        "csrc_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/csrc",
-        "csrc": "csrc",
-        "daidir": "simv.daidir",
-        "daidir_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir",
-        "default_output_dir": "csrc",
-        "archive_dir": "archive.22"
-    },
-    "CurCompileUdps": {},
     "NameTable": {
         "std": [
             "std",
@@ -52,72 +41,92 @@
             "module",
             3
         ],
-        "mux_16to1": [
-            "mux_16to1",
-            "H7PSK",
-            "module",
-            1
-        ],
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module",
             2
+        ],
+        "up_counter_test": [
+            "up_counter_test",
+            "aeb8y",
+            "module",
+            1
         ]
     },
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 100360,
+        "archive": "archive.39/_14828_archive_1.a"
+    },
+    "PEModules": [],
+    "CompileStrategy": "fullobj",
+    "CompileStatus": "Successful",
     "LVLData": [
         "SIM"
     ],
     "stat": {
-        "Frontend(%)": 79.281062650485595,
         "ru_self_cgstart": {
-            "ru_utime_sec": 0.098123000000000002,
+            "ru_utime_sec": 0.106672,
+            "ru_nivcsw": 31,
+            "ru_stime_sec": 0.078978000000000007,
             "ru_majflt": 0,
-            "ru_stime_sec": 0.096034999999999995,
-            "ru_maxrss_kb": 65556,
-            "ru_minflt": 22583,
-            "ru_nvcsw": 416,
-            "ru_nivcsw": 28
+            "ru_maxrss_kb": 66820,
+            "ru_minflt": 22299,
+            "ru_nvcsw": 380
         },
-        "nQuads": 461,
-        "mopSpeed": 31353.585773895411,
-        "ru_childs_cgstart": {
-            "ru_utime_sec": 0.0092790000000000008,
-            "ru_majflt": 0,
-            "ru_stime_sec": 0.032980000000000002,
-            "ru_maxrss_kb": 20020,
-            "ru_minflt": 4345,
-            "ru_nvcsw": 114,
-            "ru_nivcsw": 16
-        },
-        "totalObjSize": 119105,
         "ru_self_end": {
-            "ru_utime_sec": 0.123766,
+            "ru_utime_sec": 0.13872599999999999,
+            "ru_nivcsw": 35,
+            "ru_stime_sec": 0.095457,
             "ru_majflt": 0,
-            "ru_stime_sec": 0.116327,
-            "ru_maxrss_kb": 73076,
-            "ru_minflt": 25388,
-            "ru_nvcsw": 556,
-            "ru_nivcsw": 32
+            "ru_maxrss_kb": 74588,
+            "ru_minflt": 25160,
+            "ru_nvcsw": 515
         },
-        "nMops": 804,
-        "CodeGen(%)": 20.718937349514405,
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.0080809999999999996,
+            "ru_nivcsw": 16,
+            "ru_stime_sec": 0.024434999999999998,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 19960,
+            "ru_minflt": 4345,
+            "ru_nvcsw": 31
+        },
+        "mopSpeed": 36906.470331315919,
+        "quadSpeed": 17408.123791102524,
+        "totalObjSize": 115400,
         "ru_childs_end": {
-            "ru_utime_sec": 0.012087000000000001,
+            "ru_utime_sec": 0.0091819999999999992,
+            "ru_nivcsw": 18,
+            "ru_stime_sec": 0.029936999999999998,
             "ru_majflt": 0,
-            "ru_stime_sec": 0.037192999999999997,
-            "ru_maxrss_kb": 21312,
+            "ru_maxrss_kb": 21532,
             "ru_minflt": 4945,
-            "ru_nvcsw": 139,
-            "ru_nivcsw": 18
+            "ru_nvcsw": 40
         },
-        "peak_mem_kb": 277536,
-        "quadSpeed": 17977.615723589282,
-        "mop/quad": 1.7440347071583515,
-        "outputSizePerQuad": 258.36225596529283
+        "peak_mem_kb": 278492,
+        "nMops": 1183,
+        "nQuads": 558,
+        "outputSizePerQuad": 206.8100358422939,
+        "mop/quad": 2.1200716845878138,
+        "CodeGen(%)": 23.105978691809746,
+        "Frontend(%)": 76.894021308190261
     },
-    "CompileProcesses": [
-        "cgproc.12744.json"
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "up_counter_test",
+        "up_counter_test"
     ],
-    "CompileStatus": "Successful"
+    "Misc": {
+        "daidir_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir",
+        "cwd": "/DCNFS/users/student/jtrinh/senior_design_puf",
+        "csrc": "csrc",
+        "default_output_dir": "csrc",
+        "csrc_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/csrc",
+        "daidir": "simv.daidir",
+        "archive_dir": "archive.39"
+    }
 }

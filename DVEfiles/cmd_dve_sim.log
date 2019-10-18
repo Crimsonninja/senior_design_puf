@@ -9,19 +9,23 @@ synopsys::dump -autoflush on -fid VPD0
 set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpzY9x2M
-synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03-SP1-1_Full64" -sync_file /tmp/vcs_dve_rpc.jtrinh.14289}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.jtrinh.14289}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpBlH0w7
+synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03-SP1-1_Full64" -sync_file /tmp/vcs_dve_rpc.jtrinh.16784}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.jtrinh.16784}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
 config syscaddsourcenames
 config syscaddstructtypes
 synopsys::listing -disable
-ucliGUI::vpdAddHierarchy -scope mux_test -depth 1 -file /DCNFS/users/student/jtrinh/senior_design_puf/inter.vpd; synopsys::dump -flush VPD0
-synopsys::dump -add {mux_test.d1 mux_test.d10 mux_test.d11 mux_test.d12 mux_test.d13 mux_test.d14 mux_test.d15 mux_test.d16 mux_test.d2 mux_test.d3 mux_test.d4 mux_test.d5 mux_test.d6 mux_test.d7 mux_test.d8 mux_test.d9 mux_test.out mux_test.sel } -aggregates  -fid VPD0
+synopsys::dump -add {up_counter_test.clk up_counter_test.en up_counter_test.out up_counter_test.rst up_counter_test.start } -aggregates  -fid VPD0
 synopsys::run
 set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+synopsys::finish
+set ucliGUI::state
+set ucliGUI::state
+ucli_exit

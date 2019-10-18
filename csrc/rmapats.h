@@ -2259,8 +2259,11 @@ extern "C" {
 void  hs_0_M_0_0__simv_daidir (UB  * pcode, scalar  val);
 void  hs_0_M_0_1__simv_daidir (UB  * pcode, scalar  val, U  I662, scalar  * I1224, U  did);
 void  hs_0_M_0_2__simv_daidir (UB  * pcode);
-void  hs_0_M_0_5__simv_daidir (UB  * pcode, UB  val);
 void  hs_0_M_0_11__simv_daidir (UB  * pcode, scalar  val);
+void  hs_0_M_1_0__simv_daidir (UB  * pcode, scalar  val);
+void  hs_0_M_1_1__simv_daidir (UB  * pcode, scalar  val, U  I662, scalar  * I1224, U  did);
+void  hs_0_M_1_2__simv_daidir (UB  * pcode);
+void  hs_0_M_1_11__simv_daidir (UB  * pcode, scalar  val);
 void  hsG_0__0 (struct dummyq_struct * I1210, EBLK  * I1204, U  I670);
 #ifdef __cplusplus
 }

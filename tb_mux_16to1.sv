@@ -79,5 +79,5 @@ module mux_test();
     #50;
 
     $finish;
-end
+  end
 endmodule
