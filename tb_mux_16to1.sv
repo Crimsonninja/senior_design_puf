@@ -2,15 +2,16 @@
 
 module mux_test();
 
-reg d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16;
-reg [3:0] sel;
-wire out;
+  reg d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16;
+  reg [3:0] sel;
+  wire out;
 
-mux_16to1 test(d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, sel, out);
+  mux_16to1 test(d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, sel, out);
 
-// 'initial' means just to do it once (unlike 'always')
-initial
-begin
+  // 'initial' means just to do it once (unlike 'always')
+  initial begin
+    $display("Start of 16 to 1 Multiplexer Test");
+    $monitor("Output of mux: %d \t Time: %d",out, $time);
     d1 = 0;
     d2 = 1;
     d3 = 0;
