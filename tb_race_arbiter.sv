@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module tb_race_arbiter();
   reg en, fin1, fin2; // instantiating inputs to race arbiter
   wire out;           // instantiating output to race arbiter
