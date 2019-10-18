@@ -1,8 +1,10 @@
+`timescale 1ns/1ps
+
 module mux_16to1(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, sel, out);
 
   input a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;
   input [3:0] sel;
-  output out;
+  output reg out;
 
   always@(*) begin
     case (sel)

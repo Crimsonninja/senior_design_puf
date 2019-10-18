@@ -1,0 +1,102 @@
+0 
+27
++itf+/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/vcsdp_lite.tab
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/libvirsim.so /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/liberrorinf.so /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/include
+-debug_access+all
+-full64
+-gen_obj
+-picarchive
+-sverilog
+/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/bin/vcs1
+mux_16to1.v
+tb_mux_16to1.sv
+61
+sysc_uni_pwd=/DCNFS/users/student/jtrinh/senior_design_puf
+XDG_SESSION_ID=20991
+XDG_RUNTIME_DIR=/run/user/3359
+XDG_DATA_DIRS=/home/jtrinh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_CURRENT_DESKTOP=MATE
+XDG_CACHE_HOME=/tmp/xdgcache-jtrinh
+VTE_VERSION=5202
+VMR_MODE_FLAG=64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_HOME=/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64
+STARTUP=/opt/freenx-0.7.3/bin/Xsession gnome-session
+SSH_CONNECTION=129.210.16.28 48578 129.210.16.131 22
+SSH_CLIENT=129.210.16.28 48578 22
+SSH_AUTH_SOCK=/run/user/3359/keyring/ssh
+SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
+SHADOW_XAUTHORITY=/home/jtrinh/.nx/C-linux10601-1001-3CEFEC7B6283121C63E5514E9A2A1F54/authority
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/8033,unix/unix:/tmp/.ICE-unix/8033
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+SAED90_PDK=/opt/synopsys-2017/app/SAED/SAED_PDK90nm
+SAED32_28_PDK=/opt/synopsys-2017/app/SAED/SAED_PDK32nm
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_GRAPHICSSYSTEM_CHECKED=1
+QT_GRAPHICSSYSTEM=native
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+OVA_UUM=0
+NXSESSIONID=linux10601-1001-3CEFEC7B6283121C63E5514E9A2A1F54
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+MATE_DESKTOP_SESSION_ID=this-is-deprecated
+LOADEDMODULES=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:3359
+KDEDIRS=/usr
+ICV_HOME_DIR=/opt/synopsys-2017/app/icvalidator/M-2017.06-1
+HISTTIMEFORMAT=
+HISTFILESIZE=200000
+HISTCONTROL=ignoredups
+GUESTFISH_RESTORE=\e[0m
+GUESTFISH_PS1=\[\e[1;32m\]><fs>\[\e[0;31m\] 
+GUESTFISH_OUTPUT=\e[0m
+GUESTFISH_INIT=\e[1;34m
+GTK_OVERLAY_SCROLLING=0
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-7IX2H72etE,guid=4a066bae95d8afd26c381b355da92821
+COLORTERM=truecolor
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+APP_ROOT=/opt/synopsys-2017/app
+APP=synopsys-2017
+0
+3
+1571368221 mux_16to1.v
+1571368225 tb_mux_16to1.sv
+1499742301 /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/vcsdp_lite.tab
+4
+0 
+1499744793 /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/libvirsim.so
+1499743980 /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/liberrorinf.so
+1499743944 /opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/libsnpsmalloc.so
+1571368256 simv.daidir

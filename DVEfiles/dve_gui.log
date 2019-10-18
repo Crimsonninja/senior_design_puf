@@ -1,0 +1,8 @@
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version M-2017.03-SP1-1_Full64; Runtime version M-2017.03-SP1-1_Full64;  Oct 17 20:11 2019
+VCD+ Writer M-2017.03-SP1-1_Full64 Copyright (c) 1991-2017 by Synopsys Inc.
+The file '/DCNFS/users/student/jtrinh/senior_design_puf/inter.vpd' was opened successfully.
+$finish called from file "tb_mux_16to1.sv", line 44.
+$finish at simulation time               200000
+Simulation complete, time is 200000 ps.
