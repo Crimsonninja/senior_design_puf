@@ -1,3 +1,26 @@
+`timescale 1ns/1ps
+
+/*
+* Company: Santa Clara University
+* Engineer: Jonathan Trinh
+* 
+* Create Date: 10/10/2019 03:22:41 PM
+* Design Name:
+* Module Name: ro
+* Project Name: Implementation of Delay Based Physical Unclonable Function
+* Target Devices: Intel Max 10, Xilinx Spartan 7
+* Tool Versions:
+* Description: The ro module is a ring oscillator with 15 inverters that loop
+* back into the Nand Gate.
+* 
+* Dependencies:
+* 
+* Revision:
+* Revision 0.01 - File Created
+* Additional Comments:
+* 
+*/
+
 module ro(enable, w15);
   output w15;
   input enable;

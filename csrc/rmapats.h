@@ -2257,13 +2257,15 @@ static inline U asm_bsf (U in)
 extern "C" {
 #endif
 void  hs_0_M_3_0__simv_daidir (UB  * pcode, scalar  val);
-void  hs_0_M_3_1__simv_daidir (UB  * pcode, scalar  val, U  I662, scalar  * I1224, U  did);
-void  hs_0_M_3_2__simv_daidir (UB  * pcode);
 void  hs_0_M_3_11__simv_daidir (UB  * pcode, scalar  val);
 void  hs_0_M_4_0__simv_daidir (UB  * pcode, scalar  val);
 void  hs_0_M_4_1__simv_daidir (UB  * pcode, scalar  val, U  I662, scalar  * I1224, U  did);
 void  hs_0_M_4_2__simv_daidir (UB  * pcode);
 void  hs_0_M_4_11__simv_daidir (UB  * pcode, scalar  val);
+void  hs_0_M_5_0__simv_daidir (UB  * pcode, scalar  val);
+void  hs_0_M_5_1__simv_daidir (UB  * pcode, scalar  val, U  I662, scalar  * I1224, U  did);
+void  hs_0_M_5_2__simv_daidir (UB  * pcode);
+void  hs_0_M_5_11__simv_daidir (UB  * pcode, scalar  val);
 void  hsG_0__0 (struct dummyq_struct * I1210, EBLK  * I1204, U  I670);
 #ifdef __cplusplus
 }

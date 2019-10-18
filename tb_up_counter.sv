@@ -1,11 +1,11 @@
 `timescale 1ns/1ps
 
-module up_counter_test();
+module tb_up_counter();
   reg en, clk, rst; // instantiating inputs to the counter
   reg [7:0] start;  
   wire [7:0] out;   // instantiating output to the counter
 
-  up_counter dut(.out(out), .enable(en), .in(start), .clk(clk), .reset(rst)); // instantiating the up counter DUT
+  up_counter dut(.out(out), .enable(en), .start(start), .clk(clk), .reset(rst)); // instantiating the up counter DUT
 
   initial begin
     $display("Start of Up Counter Test");

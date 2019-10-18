@@ -1,5 +1,4 @@
 {
-    "MlibObjs": {},
     "NameTable": {
         "std": [
             "std",
@@ -7,9 +6,9 @@
             "module",
             3
         ],
-        "tb_shift_register": [
-            "tb_shift_register",
-            "xSPDh",
+        "tb_post_mux_counter": [
+            "tb_post_mux_counter",
+            "aELrE",
             "module",
             1
         ],
@@ -20,20 +19,80 @@
             2
         ]
     },
+    "stat": {
+        "mop/quad": 2.2353723404255321,
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.108774,
+            "ru_nivcsw": 49,
+            "ru_stime_sec": 0.086615999999999999,
+            "ru_maxrss_kb": 67252,
+            "ru_minflt": 22737,
+            "ru_majflt": 0,
+            "ru_nvcsw": 395
+        },
+        "mopSpeed": 46530.295900572972,
+        "outputSizePerQuad": 223.02260638297872,
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.014298999999999999,
+            "ru_nivcsw": 16,
+            "ru_stime_sec": 0.023087,
+            "ru_maxrss_kb": 20032,
+            "ru_minflt": 4345,
+            "ru_majflt": 0,
+            "ru_nvcsw": 31
+        },
+        "nMops": 1681,
+        "nQuads": 752,
+        "totalObjSize": 167713,
+        "ru_self_end": {
+            "ru_utime_sec": 0.144901,
+            "ru_nivcsw": 53,
+            "ru_stime_sec": 0.112701,
+            "ru_maxrss_kb": 76836,
+            "ru_minflt": 26265,
+            "ru_majflt": 0,
+            "ru_nvcsw": 536
+        },
+        "peak_mem_kb": 278372,
+        "ru_childs_end": {
+            "ru_utime_sec": 0.016261000000000001,
+            "ru_nivcsw": 18,
+            "ru_stime_sec": 0.027990999999999999,
+            "ru_maxrss_kb": 21516,
+            "ru_minflt": 4945,
+            "ru_majflt": 0,
+            "ru_nvcsw": 40
+        },
+        "quadSpeed": 20815.456583718544,
+        "Frontend(%)": 75.067804915079947,
+        "CodeGen(%)": 24.932195084920053
+    },
+    "CompileStatus": "Successful",
+    "MlibObjs": {},
     "PrevCompiledModules": {
+        "tb_post_mux_counter": {
+            "aELrE_d": {
+                "archive": "archive.53/_24311_archive_1.a",
+                "bytes": 16606,
+                "checksum": 0,
+                "mod": "tb_post_mux_counter",
+                "out": "aELrE_d.o",
+                "mode": 4
+            }
+        },
         "std": {
             "reYIK_d": {
+                "archive": "archive.53/_24311_archive_1.a",
                 "bytes": 41999,
                 "checksum": 0,
                 "mod": "std",
                 "mode": 4,
-                "archive": "archive.46/_prev_archive_1.a",
                 "out": "reYIK_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "bytes": 7742,
+                "bytes": 7750,
                 "checksum": 0,
                 "mod": "...MASTER...",
                 "mode": 4,
@@ -41,83 +100,35 @@
             }
         }
     },
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 99756,
-        "archive": "archive.46/_28582_archive_1.a"
-    },
-    "PEModules": [],
-    "stat": {
-        "ru_self_cgstart": {
-            "ru_minflt": 22411,
-            "ru_utime_sec": 0.10730199999999999,
-            "ru_nivcsw": 49,
-            "ru_stime_sec": 0.081805000000000003,
-            "ru_majflt": 0,
-            "ru_maxrss_kb": 66988,
-            "ru_nvcsw": 370
-        },
-        "ru_childs_cgstart": {
-            "ru_minflt": 4345,
-            "ru_utime_sec": 0.012311000000000001,
-            "ru_nivcsw": 16,
-            "ru_stime_sec": 0.026731000000000001,
-            "ru_majflt": 0,
-            "ru_maxrss_kb": 20040,
-            "ru_nvcsw": 31
-        },
-        "nMops": 791,
-        "nQuads": 345,
-        "CodeGen(%)": 21.473892202422334,
-        "totalObjSize": 119716,
-        "ru_childs_end": {
-            "ru_minflt": 4945,
-            "ru_utime_sec": 0.013382,
-            "ru_nivcsw": 18,
-            "ru_stime_sec": 0.032080999999999998,
-            "ru_majflt": 0,
-            "ru_maxrss_kb": 21496,
-            "ru_nvcsw": 38
-        },
-        "mopSpeed": 26957.025525679044,
-        "ru_self_end": {
-            "ru_minflt": 25195,
-            "ru_utime_sec": 0.13664499999999999,
-            "ru_nivcsw": 53,
-            "ru_stime_sec": 0.098383999999999999,
-            "ru_majflt": 0,
-            "ru_maxrss_kb": 74548,
-            "ru_nvcsw": 513
-        },
-        "quadSpeed": 11757.489009303754,
-        "mop/quad": 2.2927536231884056,
-        "Frontend(%)": 78.526107797577666,
-        "outputSizePerQuad": 347.00289855072464,
-        "peak_mem_kb": 278728
-    },
-    "Misc": {
-        "csrc": "csrc",
-        "cwd": "/DCNFS/users/student/jtrinh/senior_design_puf",
-        "csrc_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/csrc",
-        "daidir": "simv.daidir",
-        "daidir_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir",
-        "default_output_dir": "csrc",
-        "archive_dir": "archive.46"
-    },
     "CompileStrategy": "fullobj",
     "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "archive": "archive.53/_24311_archive_1.a",
+        "bytes": 101212
+    },
     "CurCompileModules": [
         "...MASTER...",
         "...MASTER...",
         "std",
-        "tb_shift_register",
-        "tb_shift_register"
+        "std",
+        "tb_post_mux_counter",
+        "tb_post_mux_counter"
     ],
-    "CompileStatus": "Successful",
+    "Misc": {
+        "cwd": "/DCNFS/users/student/jtrinh/senior_design_puf",
+        "daidir_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir",
+        "csrc": "csrc",
+        "csrc_abs": "/DCNFS/users/student/jtrinh/senior_design_puf/csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.53"
+    },
     "LVLData": [
         "SIM"
     ],
+    "PEModules": [],
     "CompileProcesses": [
-        "cgproc.28582.json"
+        "cgproc.24311.json"
     ]
 }

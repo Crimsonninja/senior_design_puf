@@ -1,5 +1,25 @@
 `timescale 1ns/1ps
 
+/*
+* Company: Santa Clara University
+* Engineer: Jonathan Trinh
+* 
+* Create Date: 10/14/2019 12:18:17 PM
+* Design Name:
+* Module Name: mux_16to1
+* Project Name: Implementation of Delay Based Physical Unclonable Function
+* Target Devices: Intel Max 10, Xilinx Spartan 7
+* Tool Versions:
+* Description: The mux_16to1 is a multiplexer that selects between 16 inputs and passes through only one. It follows that the select line is a 4-bit bus.
+* 
+* Dependencies:
+* 
+* Revision:
+* Revision 0.01 - File Created
+* Additional Comments:
+* 
+*/
+
 module mux_16to1(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, sel, out);
 
   input a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;

@@ -1,20 +1,20 @@
 {
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        2
-    ],
-    "tb_shift_register": [
-        "tb_shift_register",
-        "xSPDh",
-        "module",
-        1
-    ],
     "std": [
         "std",
         "reYIK",
         "module",
         3
+    ],
+    "tb_shift_register": [
+        "tb_shift_register",
+        "xSPDh",
+        "module",
+        4
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        2
     ]
 }
