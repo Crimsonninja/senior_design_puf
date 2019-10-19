@@ -21,15 +21,14 @@
 * 
 */
 
-module ro(enable, w15);
-  output w15;
+module ro(enable, w14);
+  output w14;
   input enable;
 
-  wire w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15, w16;
+  wire w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15;
 
-  assign #1 w16 = enable & w15;
-  assign #1 w15 = ~ w14; // w15 is the output we are interested in
-  assign #1 w14 = ~ w13;
+  assign #1 w15 = ~(enable & w14);
+  assign #1 w14 = ~ w13;  // w14 is the output we are interested in
   assign #1 w13 = ~ w12;
   assign #1 w12 = ~ w11;
   assign #1 w11 = ~ w10;
@@ -42,6 +41,6 @@ module ro(enable, w15);
   assign #1 w4 = ~ w3;
   assign #1 w3 = ~ w2;
   assign #1 w2 = ~ w1;
-  assign #1 w1 = ~ w16;
+  assign #1 w1 = ~ w15;
 
 endmodule

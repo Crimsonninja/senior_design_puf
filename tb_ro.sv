@@ -6,7 +6,7 @@ module tb_ro();
 
   reg en;
   
-  ro ro0(.enable(en), .w15(out));
+  ro ro0(.enable(en), .w14(out));
 
   initial begin
     $display("Starting Ring Oscillator Test");
@@ -18,9 +18,6 @@ module tb_ro();
     en = 1;
     #200;
     $finish;
-    //forever begin
-    //  #100 en = ~en;
-    //end
   end
 
 endmodule
