@@ -1,0 +1,8 @@
+csrc/
+DVEfiles/
+
+inter.vpd
+ucli.key
+simv
+simv.daidir
+*.gz

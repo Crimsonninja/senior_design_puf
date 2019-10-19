@@ -1,9 +1,0 @@
-#!/bin/sh -h 
-PYTHONHOME=/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/etc/search/pyh
-export PYTHONHOME
-PYTHONPATH=/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/pylib27
-export PYTHONPATH
-LD_LIBRARY_PATH=/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib:/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/lib/pylib27
-export LD_LIBRARY_PATH
-/opt/synopsys-2017/app/vcs-mx/M-2017.03-SP1-1/linux64/bin/vcsfind_create_index.exe  -z  "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir/debug_dump/fsearch/./idents_gMgkh7.xml.gz" -o "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
-\mv "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/DCNFS/users/student/jtrinh/senior_design_puf/simv.daidir/debug_dump/fsearch/fsearch.db"
