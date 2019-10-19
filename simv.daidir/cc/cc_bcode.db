@@ -1,0 +1,2 @@
+sid tb_race_arbiter
+bcid 0 0 WIDTH,1 CALL_ARG_VAL,2,0 CALL_ARG_VAL,3,0 NOT AND OPT_CONST,1 EQU RET

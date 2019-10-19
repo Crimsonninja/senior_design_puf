@@ -7,7 +7,7 @@ UUM=FALSE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
 COSIM=FALSE
-TOP=tb_shift_register 
+TOP=tb_race_arbiter 
 
 [Value]
 WREALX=ffff534e50535f58

@@ -11,10 +11,22 @@ module tb_race_arbiter();
     $monitor("Output of Race Arbiter: %d \t Time: %d", out, $time);
     
     // Initialization with ordering
-    fin1 = 1;
-    fin2 = 1;
+    fin2 = 0;
+    fin1 = 0;
     en = 0;
-    #50;
+    #31;
+    // out should be 0
+    fin1 = 0;
+    fin2 = 1;
+    #20;
+    // out should be 1
+    fin1 = 1;
+    fin2 = 0;
+    #20;
+    // unknown behavior should ignore
+    fin2 = 1;
+    fin1 = 1;
+    #20;
     
     $finish;
   end

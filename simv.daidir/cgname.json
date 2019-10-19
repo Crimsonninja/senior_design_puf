@@ -5,11 +5,11 @@
         "module",
         3
     ],
-    "tb_shift_register": [
-        "tb_shift_register",
-        "xSPDh",
+    "tb_race_arbiter": [
+        "tb_race_arbiter",
+        "DVWM7",
         "module",
-        4
+        1
     ],
     "...MASTER...": [
         "SIM",

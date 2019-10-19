@@ -1,14 +1,13 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Thu Oct 17 23:05:28 2019
+# Saved on Fri Oct 18 17:45:24 2019
 # Designs open: 1
 #   Sim: /DCNFS/users/student/jtrinh/senior_design_puf/simv
 # Toplevel windows open: 1
 # 	TopLevel.1
-#   Source.1: tb_shift_register
-#   Group count = 2
-#   Group Group1 signal count = 3
-#   Group Group2 signal count = 4
+#   Source.1: tb_race_arbiter
+#   Group count = 1
+#   Group dut signal count = 7
 # End_DVE_Session_Save_Info
 
 # DVE version: M-2017.03-SP1-1_Full64
@@ -67,7 +66,7 @@ if {![gui_exist_window -window TopLevel.1]} {
 } else { 
     set TopLevel.1 TopLevel.1
 }
-gui_show_window -window ${TopLevel.1} -show_state normal -rect {{18 97} {1187 763}}
+gui_show_window -window ${TopLevel.1} -show_state normal -rect {{2 52} {1140 703}}
 
 # ToolBar settings
 gui_set_toolbar_attributes -toolbar {TimeOperations} -dock_state top
@@ -114,23 +113,23 @@ gui_show_toolbar -toolbar {Testbench}
 # End ToolBar settings
 
 # Docked window settings
-set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 184]
+set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 172]
 catch { set Hier.1 [gui_share_window -id ${HSPane.1} -type Hier] }
-gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 184
+gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 172
 gui_set_window_pref_key -window ${HSPane.1} -key dock_height -value_type integer -value -1
 gui_set_window_pref_key -window ${HSPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 183} {height 436} {dock_state left} {dock_on_new_line true} {child_hier_colhier 140} {child_hier_coltype 100} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
-set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 196]
+gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 171} {height 410} {dock_state left} {dock_on_new_line true} {child_hier_colhier 140} {child_hier_coltype 100} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
+set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 184]
 catch { set Data.1 [gui_share_window -id ${DLPane.1} -type Data] }
-gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 196
-gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 436
+gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 184
+gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 410
 gui_set_window_pref_key -window ${DLPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 195} {height 436} {dock_state left} {dock_on_new_line true} {child_data_colvariable 152} {child_data_colvalue 17} {child_data_coltype 59} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
-set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 136]
-gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1170
-gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 136
+gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 183} {height 410} {dock_state left} {dock_on_new_line true} {child_data_colvariable 152} {child_data_colvalue 17} {child_data_coltype 59} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
+set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 124]
+gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1082
+gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 124
 gui_set_window_pref_key -window ${Console.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1169} {height 135} {dock_state bottom} {dock_on_new_line true}}
+gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1138} {height 123} {dock_state bottom} {dock_on_new_line true}}
 #### Start - Readjusting docked view's offset / size
 set dockAreaList { top left right bottom }
 foreach dockArea $dockAreaList {
@@ -174,16 +173,16 @@ gui_update_statusbar_target_frame ${TopLevel.1}
 # DVE Open design session: 
 
 if { [llength [lindex [gui_get_db -design Sim] 0]] == 0 } {
-gui_set_env SIMSETUP::SIMARGS {{-ucligui }}
-gui_set_env SIMSETUP::SIMEXE {/DCNFS/users/student/jtrinh/senior_design_puf/simv}
+gui_set_env SIMSETUP::SIMARGS {{}}
+gui_set_env SIMSETUP::SIMEXE {./simv}
 gui_set_env SIMSETUP::ALLOW_POLL {0}
 if { ![gui_is_db_opened -db {/DCNFS/users/student/jtrinh/senior_design_puf/simv}] } {
-gui_sim_run Ucli -exe simv -args {-ucligui } -dir /DCNFS/users/student/jtrinh/senior_design_puf -nosource
+gui_sim_run Ucli -exe simv -args { -ucligui} -dir /DCNFS/users/student/jtrinh/senior_design_puf -nosource
 }
 }
 if { ![gui_sim_state -check active] } {error "Simulator did not start correctly" error}
-gui_set_precision 1s
-gui_set_time_units 1s
+gui_set_precision 1ps
+gui_set_time_units 1ps
 #</Database>
 
 # DVE Global setting session: 
@@ -200,21 +199,14 @@ gui_set_time_units 1s
 # Global: Signal Compare
 
 # Global: Signal Groups
-gui_load_child_values {tb_shift_register.dut}
-gui_load_child_values {tb_shift_register}
+gui_load_child_values {tb_race_arbiter.dut}
 
 
-set _session_group_3 Group1
-gui_sg_create "$_session_group_3"
-set Group1 "$_session_group_3"
+set _session_group_1 dut
+gui_sg_create "$_session_group_1"
+set dut "$_session_group_1"
 
-gui_sg_addsignal -group "$_session_group_3" { tb_shift_register.out tb_shift_register.clk tb_shift_register.in }
-
-set _session_group_4 Group2
-gui_sg_create "$_session_group_4"
-set Group2 "$_session_group_4"
-
-gui_sg_addsignal -group "$_session_group_4" { tb_shift_register.dut.clk tb_shift_register.dut.in tb_shift_register.dut.out tb_shift_register.dut.tmp }
+gui_sg_addsignal -group "$_session_group_1" { tb_race_arbiter.dut.cnt2_done tb_race_arbiter.dut.enable tb_race_arbiter.dut.cnt1_done tb_race_arbiter.dut.winner tb_race_arbiter.dut.out tb_race_arbiter.dut.finished1 tb_race_arbiter.dut.finished2 }
 
 # Global: Highlighting
 
@@ -224,7 +216,7 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 96
+gui_set_time -C1_only 91000
 
 
 
@@ -249,17 +241,15 @@ gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtP
 gui_list_set_filter -id ${Hier.1} -text {*}
 gui_hier_list_init -id ${Hier.1}
 gui_change_design -id ${Hier.1} -design Sim
-catch {gui_list_expand -id ${Hier.1} tb_shift_register}
-catch {gui_list_select -id ${Hier.1} {tb_shift_register.dut}}
+catch {gui_list_expand -id ${Hier.1} tb_race_arbiter}
+catch {gui_list_select -id ${Hier.1} {tb_race_arbiter.dut}}
 gui_view_scroll -id ${Hier.1} -vertical -set 0
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Data 'Data.1'
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
-gui_list_show_data -id ${Data.1} {tb_shift_register.dut}
-gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {tb_shift_register.dut.in tb_shift_register.dut.tmp tb_shift_register.dut.clk tb_shift_register.dut.out }}
+gui_list_show_data -id ${Data.1} {tb_race_arbiter.dut}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
@@ -268,7 +258,7 @@ gui_view_scroll -id ${Hier.1} -horizontal -set 0
 # Source 'Source.1'
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
-gui_open_source -id ${Source.1}  -replace -active tb_shift_register /DCNFS/users/student/jtrinh/senior_design_puf/tb_shift_register.sv
+gui_open_source -id ${Source.1}  -replace -active tb_race_arbiter /DCNFS/users/student/jtrinh/senior_design_puf/tb_race_arbiter.sv
 gui_view_scroll -id ${Source.1} -vertical -set 0
 gui_src_set_reusable -id ${Source.1}
 # Restore toplevel window zorder
@@ -276,7 +266,7 @@ gui_src_set_reusable -id ${Source.1}
 if {[gui_exist_window -window ${TopLevel.1}]} {
 	gui_set_active_window -window ${TopLevel.1}
 	gui_set_active_window -window ${Source.1}
-	gui_set_active_window -window ${DLPane.1}
+	gui_set_active_window -window ${HSPane.1}
 }
 #</Session>
 
