@@ -6,12 +6,12 @@
 * 
 * Create Date: 10/10/2019 03:22:41 PM
 * Design Name:
-* Module Name: ro
+* Module Name: ring_osc
 * Project Name: Implementation of Delay Based Physical Unclonable Function
 * Target Devices: Intel Max 10, Xilinx Spartan 7
 * Tool Versions:
-* Description: The ro module is a ring oscillator with 15 inverters that loop
-* back into the Nand Gate.
+* Description: The ring_osc module is a ring oscillator with 14 inverters that loop
+* back into the Nand Gate effectively making 15 inverters in total.
 * 
 * Dependencies:
 * 
@@ -21,7 +21,7 @@
 * 
 */
 
-module ro(enable, w14);
+module ring_osc(enable, w14);
   output w14;
   input enable;
 

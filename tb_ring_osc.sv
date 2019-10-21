@@ -1,12 +1,12 @@
 `timescale 1ns/1ps
 
-module tb_ro();
+module tb_ring_osc();
 
   wire out;
 
   reg en;
   
-  ro ro0(.enable(en), .w14(out));
+  ring_osc ro0(.enable(en), .w14(out));
 
   initial begin
     $display("Starting Ring Oscillator Test");
