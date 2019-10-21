@@ -34,7 +34,7 @@ parameter GOAL = 255;
 
 //----------Output Ports--------------
   output reg finished;
-  output reg [8:0] out;
+  output reg [7:0] out;
 //------------Input Ports--------------
   input enable, clk, reset;
 //-------------Code Starts Here-------
