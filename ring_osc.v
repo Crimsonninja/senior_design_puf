@@ -3,7 +3,7 @@
 /*
 * Company: Santa Clara University
 * Engineer: Jonathan Trinh
-* 
+*
 * Create Date: 10/10/2019 03:22:41 PM
 * Design Name:
 * Module Name: ring_osc
@@ -12,20 +12,34 @@
 * Tool Versions:
 * Description: The ring_osc module is a ring oscillator with 14 inverters that loop
 * back into the Nand Gate effectively making 15 inverters in total.
-* 
+*
 * Dependencies:
-* 
+*
 * Revision:
 * Revision 0.01 - File Created
 * Additional Comments:
-* 
+*
 */
 
 module ring_osc(enable, w14);
   output w14;
   input enable;
 
-  wire w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15;
+  (* dont_touch = "yes" *) wire w1;
+  (* dont_touch = "yes" *) wire w2;
+  (* dont_touch = "yes" *) wire w3;
+  (* dont_touch = "yes" *) wire w4;
+  (* dont_touch = "yes" *) wire w5;
+  (* dont_touch = "yes" *) wire w6;
+  (* dont_touch = "yes" *) wire w7;
+  (* dont_touch = "yes" *) wire w8;
+  (* dont_touch = "yes" *) wire w9;
+  (* dont_touch = "yes" *) wire w10;
+  (* dont_touch = "yes" *) wire w11;
+  (* dont_touch = "yes" *) wire w12;
+  (* dont_touch = "yes" *) wire w13;
+  (* dont_touch = "yes" *) wire w14;
+  (* dont_touch = "yes" *) wire w15;
 
   assign #1 w15 = ~(enable & w14);
   assign #1 w14 = ~ w13;  // w14 is the output we are interested in
