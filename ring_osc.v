@@ -41,20 +41,22 @@ module ring_osc(enable, w14);
   (* dont_touch = "yes" *) wire w14;
   (* dont_touch = "yes" *) wire w15;
 
-  assign #1 w15 = ~(enable & w14);
-  assign #1 w14 = ~ w13;  // w14 is the output we are interested in
-  assign #1 w13 = ~ w12;
-  assign #1 w12 = ~ w11;
-  assign #1 w11 = ~ w10;
-  assign #1 w10 = ~ w9;
-  assign #1 w9 = ~ w8;
-  assign #1 w8 = ~ w7;
-  assign #1 w7 = ~ w6;
-  assign #1 w6 = ~ w5;
-  assign #1 w5 = ~ w4;
-  assign #1 w4 = ~ w3;
-  assign #1 w3 = ~ w2;
-  assign #1 w2 = ~ w1;
-  assign #1 w1 = ~ w15;
+  
+
+  assign #$urandom_range(10,1) w15 = ~(enable & w14);
+  assign #$urandom_range(10,1) w14 = ~ w13;  // w14 is the output we are interested in
+  assign #$urandom_range(10,1) w13 = ~ w12;
+  assign #$urandom_range(10,1) w12 = ~ w11;
+  assign #$urandom_range(10,1) w11 = ~ w10;
+  assign #$urandom_range(10,1) w10 = ~ w9;
+  assign #$urandom_range(10,1) w9 = ~ w8;
+  assign #$urandom_range(10,1) w8 = ~ w7;
+  assign #$urandom_range(10,1) w7 = ~ w6;
+  assign #$urandom_range(10,1) w6 = ~ w5;
+  assign #$urandom_range(10,1) w5 = ~ w4;
+  assign #$urandom_range(10,1) w4 = ~ w3;
+  assign #$urandom_range(10,1) w3 = ~ w2;
+  assign #$urandom_range(10,1) w2 = ~ w1;
+  assign #$urandom_range(10,1) w1 = ~ w15;
 
 endmodule
