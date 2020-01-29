@@ -59,6 +59,6 @@ void loop() {
       //          Serial.print("1");
       //        }
     }
-    Serial.println("");
+    Serial.print(",");
   }
 }
