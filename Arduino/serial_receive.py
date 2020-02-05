@@ -1,10 +1,12 @@
 import serial
 import time
 import csv
+from datetime import datetime
 
-output_file_name = 'rTxt.csv'
+timeString = datetime.now().strftime("%Y-%m-%d___%I_%M_%S%p")
+output_file_name = 'rTxt___' + timeString +'.csv'
 
-ser = serial.Serial('/dev/cu.usbmodem1411',38400, timeout=None)  # parameters need to change depending on computer
+ser = serial.Serial('/dev/cu.usbmodem1411',57600, timeout=None)  # parameters need to change depending on computer
 print("Name of Port: %s" %(ser.name))
 
 
@@ -14,7 +16,7 @@ count = 0
 
 with open(output_file_name, 'w') as csvfile:
     file_writer = csv.writer(csvfile, delimiter=',')
-    file_writer.writerow(['R', 'Set', 'Count', 'C[0]', 'C[1]', 'C[2]', 'C[3]', 'C[4]', 'C[5]', 'C[6]', 'C[7]'])
+    file_writer.writerow(['R', 'Set', 'Count', 'R[0]', 'R[1]', 'R[2]', 'R[3]', 'R[4]', 'R[5]', 'R[6]', 'R[7]'])
 
 response = ser.readline()
 
@@ -30,12 +32,12 @@ while True:
             file_writer = csv.writer(csvfile, delimiter=',')
             file_writer.writerow(['R start', loop_count, 'N/A'])
     else:
-        response = response[2:len(response)-6]
+        response = response[2:len(response)-6]  # chop off the \b and \n stuff
         print('R', count, ': ',response)  # for convenience
         with open(output_file_name, 'a') as csvfile:
             file_writer = csv.writer(csvfile, delimiter=',')
             file_writer.writerow(['R', loop_count, count] + response.split(","))
         count = count + 1
 
-    if loop_count > max_loop_count
+    if loop_count > max_loop_count:
         break

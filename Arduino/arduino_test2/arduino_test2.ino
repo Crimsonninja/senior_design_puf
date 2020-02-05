@@ -4,23 +4,24 @@ String inData;
 int count = 0;
 int data;
 int challenge[8];
-int some_pins[8] = {3, 12, 11, 10, 9, 8, 7, 6};
-int rPins[8] = {28, 30, 32, 34, 36, 38, 40, 42};
+int cPins[8] = {12, 11, 10, 9, 8, 7, 6, 5};
 
 void setup() {
-  Serial.begin(38400);
+  Serial.begin(57600);
   for (int i = 0; i < 8; i++) {
-    pinMode(some_pins[i], OUTPUT);
+    pinMode(cPins[i], OUTPUT);
   }
+  //  /*Comment this*/pinMode(3, OUTPUT);
+  //  /*Comment this*/pinMode(4, OUTPUT);
   Serial.println("Initializing...");
-  for (int i = 0; i < 8 ; i++) {
-    pinMode(rPins[i], INPUT);
-  }
+  //  digitalWrite(4, HIGH);
+  //  delayMicroseconds(700);
+  //  digitalWrite(4, LOW);
 }
 
 void sendChallenge(int challenge[]) {
   for (int i = 0; i < 8; i++) {
-    digitalWrite(some_pins[i], challenge[i]);
+    digitalWrite(cPins[i], challenge[i]);
   }
 }
 
@@ -45,20 +46,10 @@ void loop() {
         }
         sendChallenge(challenge);
         inData = ""; // Clear received buffer
+        //        digitalWrite(3, HIGH);
+        //        delayMicroseconds(700);
+        //        digitalWrite(3, LOW);
       }
-
     }
-    // Listen for response and write to serial monitor
-    for (int i = 0; i < 8; i++) {
-      data = digitalRead(rPins[i]);
-      Serial.print(data);
-
-      //        if (data == 0) {
-      //          Serial.print("0");
-      //        } else {
-      //          Serial.print("1");
-      //        }
-    }
-    Serial.print(",");
   }
 }
