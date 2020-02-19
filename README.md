@@ -19,9 +19,14 @@ To actually run the simulation, you have two options:
 1. `./simv` will run the sim in the existing terminal session outputting all monitor and display statements
 2. `./simv -gui &` will bring up the GUI where you can take a look at the waveform.
 
+## Using Vivado to Synthesize and Implement on Board
+
+For our purpose, we use a Digilent S7, provided by Pat McGuire of Xilinx. The reference manual is located [here](https://reference.digilentinc.com/reference/programmable-logic/arty-s7/start)
+
+
 ## Creators
 
 * Abigail Aguirre
 * Michael Hall
 * Tim Lim
-* Jonathan Trinh (owner of repo) 
+* Jonathan Trinh (owner of repo)
