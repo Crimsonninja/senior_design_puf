@@ -12,10 +12,10 @@ A ring oscillator (RO) PUF is a delay-based PUF which uses frequency variations 
 
 We propose a two designs of an 8-bit->8-bit RO PUF.
 
-1. A parallel design that we suggest be used as a benchmark for all PUF designs.
-2. A new serial scheme that uses a non-linear scrambler to increase internal entropy (a good measure of randomness) in the system.
+1. A parallel scheme that we suggest be used as a benchmark for all PUF designs.
+2. A new serial scheme that uses a non-linear scrambler to increase internal entropy (a good measure of randomness) in the system. This scheme also saves in hardware and power compared to the parallel variation.
 
-![Schematic of Design](/images/puf_scheme.jpg "Schematic of Design") *Modules surrounded by yellow dotted line are included in the serial scheme. The schematic without these modules is one subblock of the parallel scheme.*
+![Schematic of Design](/images/puf_scheme.jpg "Schematic of Design") *This is the overall schematic of the serial scheme. Modules surrounded by yellow dotted line are included in the serial scheme. The schematic without these modules is one subblock of the parallel scheme.*
 
 ## Getting Started
 
@@ -38,6 +38,27 @@ To actually run the simulation, you have two options:
 
 For our purpose, we use a Digilent S7, provided by Pat McGuire of Xilinx. The reference manual is located [here](https://reference.digilentinc.com/reference/programmable-logic/arty-s7/start)
 
+### Design Placement
+
+To simulate the PUF being manufactured on different ICs, we can place the PUF design on different areas of the die in the FPGA. There are a number of ways to do this, but you will most likely need the Master XDC Constraint File (these define the IOs of your board and tie the design to the board) of whichever board you are using as these directives will go into that file. Placer directives are tool settings that are set on a per-run basis. Timing and pblock constraings to into the XDC constraint file.
+
+1. The first method is to use different placer directives leveraging different algorithms in the placer (set in the synthesis/implementation settings):
+    1. Ex: place\_design -directive Explore
+    2. Ex: place\_design -directive ExtraNetDelay_high
+    3. Ex: place\_design -directive Quick
+2. The second method is to use BEL/LOC attributes to force the location of a Look-up Table (LUT):
+    1. Ex: `set_property BEL A5 [get_cells my_lut_name]`
+    2. Ex: `set_property LOC SLICE_X0Y0 [get_cells my_lut_name]`
+3. The third method is to create tighter timing constraints on timing path (most probably a clock):
+    1. Ex: Add 50 ps of clock uncertainty to particular clock via `set_clock_uncertainty 0.05 -setup [get_clocks my_clock_name]`
+    2. Ex: Set duty cycle of clock period to 99% instead of 100%. Tightening the constraint by a bit will change placement -> `set_max_delay [expr [0.99 * $clk_period]] -from [get_cells start_cell_name] -to [get_cells destination_cell_name]`
+4. The fourth method is to create a physical constraint block (pblock) to place the design on a particular spot (denoted by slices) on the die:
+    1. Ex:
+    ```
+    create_pblock my_pblock
+    resize_pblock  my_pblock -add SLICE_X0Y0:SLICE_X10Y10
+    add_cells_to_pblock my_pblock [get_cells my_list_of_cells]
+    ```
 
 ## Creators
 
