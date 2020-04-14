@@ -1,6 +1,18 @@
 # Implementation of Physical Unclonable Function
 
-This is a repository for SCU Senior Design 2020. In this project, we will be implementing a version Ring Oscillator Physical Unclonable Function.
+This is a repository for SCU Senior Design 2020. In this project, we will be implementing two versions of a Ring Oscillator Physical Unclonable Function.
+
+# Background
+
+In recent years, chip manufacturing has been moved outside the United States, while IP design remains inside the US, thereby resulting in a huge increase in counterfeiting, IP piracy and overproduction. These fake chips are bad for both the industry and the consumer - the original designer loses money and credibility as the consumer attempts to use a chip with higher failure rates and a shorter lifespan. When a designer sends their schematic overseas, they should be cautious with their design. Did the foundry overproduce chips to reverse engineer and sell the design to competitors? Did they add in hardware Trojans to leak/destroy protected data? How can a designer ensure the chips are authentic? And if another individual purchases one of the ICs, how do they know they are receiving a genuine one and not a counterfeit chip? Designers need some mechanism to guarantee that their design remains authentic after production and unusable to counterfeiters.
+
+A ring oscillator (RO) PUF is a delay-based PUF which uses frequency variations in inverter chains to generate unique IDs. ROs are made up of an odd numbers of inverters connected in a chain which oscillates at a specific frequency. Process variation introduced during IC manufacturing causes the frequencies in each RO to be slightly different. A RO PUF consists of identically-laid out ring oscillators fed into a two MUXs. The PUF challenge feeds into the MUX select lines and chooses which two ROs to compare. The MUX outputs are fed into a counter, each of which counts up to a preset value. If the top or the bottom counter reaches the preset value, the race arbiter will output a '1' or a '0' as the response depending which counter finishes first.
+
+# Our Designs
+
+We propose a two designs of an 8-bit->8-bit RO PUF. The first is a parallel design that we suggest be used as a benchmark for all PUF designs. The second is a new serial scheme that uses a non-linear scrambler to increase internal entropy (a good measure of randomness) in the system.
+
+![Schematic of Design (Modules surrounded by yellow dotted line are included in the serial scheme. Without these modules is one subblock of the parallel scheme.)](puf_scheme.jpg)
 
 ## Getting Started
 
@@ -30,3 +42,10 @@ For our purpose, we use a Digilent S7, provided by Pat McGuire of Xilinx. The re
 * Michael Hall
 * Tim Lim
 * Jonathan Trinh (owner of repo)
+
+## Special Thanks To
+
+* Dr. Sara Tehranipoor (Advisor)
+* Professor Jim Lewis
+* Pat McGuire
+* Dr. Cary Yang (2020 EE Senior Design Facilitator)
