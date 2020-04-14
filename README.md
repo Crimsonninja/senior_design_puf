@@ -40,7 +40,7 @@ For our purpose, we use a Digilent S7, provided by Pat McGuire of Xilinx. The re
 
 ### Design Placement
 
-To simulate the PUF being manufactured on different ICs, we can place the PUF design on different areas of the die in the FPGA. There are a number of ways to do this, but you will most likely need the Master XDC Constraint File (these define the IOs of your board and tie the design to the board) of whichever board you are using as these directives will go into that file. Placer directives are tool settings that are set on a per-run basis. Timing and pblock constraings to into the XDC constraint file.
+To simulate the PUF being manufactured on different ICs, we can place the PUF design on different areas of the die in the FPGA. There are a number of ways to do this, but you will most likely need the Master XDC Constraint File (these define the IOs of your board and tie the design to the board) of whichever board you are using as these directives will go into that file. Placer directives are tool settings that are set on a per-run basis. Timing and pblock constraints go into the XDC constraint file.
 
 1. The first method is to use different placer directives leveraging different algorithms in the placer (set in the synthesis/implementation settings):
     1. Ex: place\_design -directive Explore
@@ -51,7 +51,7 @@ To simulate the PUF being manufactured on different ICs, we can place the PUF de
     2. Ex: `set_property LOC SLICE_X0Y0 [get_cells my_lut_name]`
 3. The third method is to create tighter timing constraints on timing path (most probably a clock):
     1. Ex: Add 50 ps of clock uncertainty to particular clock via `set_clock_uncertainty 0.05 -setup [get_clocks my_clock_name]`
-    2. Ex: Set duty cycle of clock period to 99% instead of 100%. Tightening the constraint by a bit will change placement -> `set_max_delay [expr [0.99 * $clk_period]] -from [get_cells start_cell_name] -to [get_cells destination_cell_name]`
+    2. Ex: Set duty cycle of clock period to 99% instead of 100%. Tightening the constraint by a bit will change placement: `set_max_delay [expr [0.99 * $clk_period]] -from [get_cells start_cell_name] -to [get_cells destination_cell_name]`
 4. The fourth method is to create a physical constraint block (pblock) to place the design on a particular spot (denoted by slices) on the die:
     1. Ex:
     ```
@@ -69,7 +69,8 @@ To simulate the PUF being manufactured on different ICs, we can place the PUF de
 
 ## Special Thanks To
 
-* Dr. Sara Tehranipoor (Advisor)
-* Professor Jim Lewis
-* Pat McGuire
-* Dr. Cary Yang (2020 EE Senior Design Facilitator)
+* Dr. Sara Tehranipoor (Advisor and Hardware Security Expert) from SCU
+* Pat McGuire (Sponsor) from Xilinx
+* Professor Jim Lewis (Implementation Aid) from SCU
+* Dr. Cary Yang (Senior Design Facilitator) from SCU
+* Dr. Shoba Krishnan (EE Department Chair) from SCU
