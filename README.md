@@ -12,7 +12,7 @@ A ring oscillator (RO) PUF is a delay-based PUF which uses frequency variations 
 
 We propose a two designs of an 8-bit->8-bit RO PUF. The first is a parallel design that we suggest be used as a benchmark for all PUF designs. The second is a new serial scheme that uses a non-linear scrambler to increase internal entropy (a good measure of randomness) in the system.
 
-![Schematic of Design (Modules surrounded by yellow dotted line are included in the serial scheme. Without these modules is one subblock of the parallel scheme.)](puf_scheme.jpg)
+![Schematic of Design](/images/puf_scheme.jpg "Schematic of Design") *Modules surrounded by yellow dotted line are included in the serial scheme. The schematic without these modules is one subblock of the parallel scheme.*
 
 ## Getting Started
 
