@@ -24,6 +24,7 @@
 module ring_osc(enable, out);
   output out;
   input enable;
+
   (* dont_touch = "yes" *) wire w1;
   (* dont_touch = "yes" *) wire w2;
   (* dont_touch = "yes" *) wire w3;

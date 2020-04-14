@@ -1,26 +1,28 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company:
-// Engineer:
-//
-// Create Date: 02/10/2020 05:18:15 PM
-// Design Name:
-// Module Name: top_level
-// Project Name:
-// Target Devices:
-// Tool Versions:
-// Description:
-//
-// Dependencies:
-//
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-//
-//////////////////////////////////////////////////////////////////////////////////
 
+/*
+* Company: Santa Clara University
+* Engineer: Jonathan Trinh
+*
+* Create Date: 03/29/2020 09:14:40 PM
+* Design Name:
+* Module Name: top_level_serial
+* Project Name: Delay-based Physical Unclonable Function Implementation
+* Target Devices: Digilent S7-25, S7-50 (Xilinx Spartan 7)
+* Tool Versions:
+* Description: Top Level that ties the puf_serial module to the Digilent S7 board.
+*              Inputs and outputs are defined in the XDC Master Constraint File
+*              provided by Xilinx.
+*
+* Dependencies:
+*
+* Revision:
+* Revision 0.01 - File Created
+* Additional Comments:
+*
+*/
 
-module top_level(
+module top_level_serial(
     input enable,
     input ck_io26,
     input ck_io27,
@@ -44,8 +46,6 @@ module top_level(
     output ck_io8
     );
 
-    //reg [24:0] count = 0;
-
     (* dont_touch = "yes" *) wire [7:0] challenge;
     (* dont_touch = "yes" *) wire [7:0] response;
     (* dont_touch = "yes" *) wire [31:0] enables;
@@ -56,9 +56,5 @@ module top_level(
     assign enables = {32{enable}};
     assign ck_io8 = orred | done;
 
-    //always @ (posedge(clk)) count <= count + 1;
-    //assign ck_io7 = count[24];
-    //assign response = challenge;
-    (* dont_touch = "yes" *) puf_parallel parallel_scheme(enables, challenge, response, done, clk, ck_io0);    // ck_io0 is computer_ack for reset
-
+    (* dont_touch = "yes" *) puf_serial serial_scheme(enables, challenge, response, done, clk, ck_io0);    // ck_io0 is computer_ack for reset
 endmodule
