@@ -7,8 +7,8 @@
 * Create Date: 10/17/2019 02:15:09 PM
 * Design Name:
 * Module Name: race_arbiter
-* Project Name: Delay-based Physical Unclonable Function Implementation
-* Target Devices: Digilent S7-25, S7-50 (Xilinx Spartan 7)
+* Project Name: Implementation of Delay Based Physical Unclonable Function
+* Target Devices: Intel Max 10, Xilinx Spartan 7
 * Tool Versions:
 * Description: The race_arbiter determines which signal finished first. If
 * finished1 is asserted first, then the output is 1. If finished2 is asserted

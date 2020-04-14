@@ -7,8 +7,8 @@
 * Create Date: 10/14/2019 12:18:17 PM
 * Design Name:
 * Module Name: mux_16to1
-* Project Name: Delay-based Physical Unclonable Function Implementation
-* Target Devices: Digilent S7-25, S7-50 (Xilinx Spartan 7)
+* Project Name: Implementation of Delay Based Physical Unclonable Function
+* Target Devices: Intel Max 10, Xilinx Spartan 7
 * Tool Versions:
 * Description: The mux_16to1 is a multiplexer that selects between 16 inputs and passes through only one. It follows that the select line is a 4-bit bus.
 *

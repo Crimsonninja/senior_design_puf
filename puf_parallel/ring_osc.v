@@ -7,8 +7,8 @@
 * Create Date: 10/10/2019 03:22:41 PM
 * Design Name:
 * Module Name: ring_osc
-* Project Name: Delay-based Physical Unclonable Function Implementation
-* Target Devices: Digilent S7-25, S7-50 (Xilinx Spartan 7)
+* Project Name: Implementation of Delay Based Physical Unclonable Function
+* Target Devices: Intel Max 10, Xilinx Spartan 7
 * Tool Versions:
 * Description: The ring_osc module is a ring oscillator with 14 inverters that loop
 * back into the Nand Gate effectively making 15 inverters in total.
