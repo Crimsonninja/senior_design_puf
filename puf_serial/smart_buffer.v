@@ -51,9 +51,13 @@ module smart_buffer(
     assign empty = (count==0)? 1'b1 : 1'b0;
 
     reg [7:0] tmp;  // the internal buffer/memory. dataOut has full access to this
-    reg reset_r, bit_done_on, bit_done_r1;
-    wire reset_out= computer_ack_reset|reset_r;
-    assign {counter_reset, arbiter_reset, scrambler_reset} = {3{reset_out}};
+
+    reg reset_r, reset_l, bit_done_on, bit_done_r1;
+    wire reset_counter = computer_ack_reset | reset_l;
+    wire reset_out = computer_ack_reset | reset_r;
+
+    assign {arbiter_reset, scrambler_reset} = {2{reset_out}};
+    assign counter_reset = reset_counter;
     assign dataOut = tmp;
 
     // Since "dataIn" and "bit_done" are two signals that come from the race arbiter (an asynchronous module)
@@ -76,13 +80,15 @@ module smart_buffer(
       end
     end
 
-    // Second always block to define reset_r (local reset) logic. We want to make sure that reset_r asserts at
-    // least two clock cycles from the time bit_done_on is asserted to ensure sufficient time to store the bit from data FIFO
+    // Second always block to define reset_r (local reset for scrambler and arbiter) logic. We want to make sure that reset_r
+    // asserts at least two clock cycles from the time bit_done_on is asserted to ensure sufficient time to store the bit from
+    // data FIFO. From there, reset_l (for the counter) is asserted one clock cycle after reset_r (three clock cycles after
+    // bit_done_on)
     always @(posedge clock or posedge computer_ack_reset) begin
       if (computer_ack_reset)
-        {reset_r,bit_done_r1} <= 2'b00;
+        {reset_l, reset_r,bit_done_r1} <= 3'b000;
       else
-        {reset_r,bit_done_r1} <= {bit_done_r1,bit_done_on};     // delay reset_r =  2 cycles from bit_done_on
+        {reset_l, reset_r,bit_done_r1} <= {reset_r, bit_done_r1, bit_done_on};     // delay reset_r =  2 cycles from bit_done_on
     end
 
     // Third always block to define internal storage behavior.
@@ -100,7 +106,6 @@ module smart_buffer(
             count <= 0;
         end
         else if (bit_done_on) begin
-            //tmp <= {tmp[6:0],dataIn};
             count <= count + 1;
             if (count == 7) ready_to_read <= 1'b1;
         end
